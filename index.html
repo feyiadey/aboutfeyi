@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Feyi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-pic {
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-divider {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #4f46e5, transparent);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-purple-50 min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">About Feyi</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                    <a href="#likes" class="text-gray-700 hover:text-indigo-600 transition">Likes</a>
+                    <a href="#dislikes" class="text-gray-700 hover:text-indigo-600 transition">Dislikes</a>
+                    <a href="#hobbies" class="text-gray-700 hover:text-indigo-600 transition">Hobbies</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600 transition">About</a>
+            <a href="#likes" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Likes</a>
+            <a href="#dislikes" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Dislikes</a>
+            <a href="#hobbies" class="block py-2 text-gray-700 hover:text-indigo-600 transition">Hobbies</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hi, I'm <span class="text-indigo-600">Feyi</span></h1>
+                    <p class="text-lg text-gray-600 mb-6">This is everything you need to know about me, if you get this and still ask me crazy questions best believe you will be ignored!</p>
+                    <div class="flex space-x-4">
+                        <a href="#about" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition shadow-md">Get to Know Me</a>
+                        <a href="#hobbies" class="border border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-6 py-3 rounded-lg font-medium transition">My Hobbies</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                    <div class= "w-64 h-64 md:w-80 md:h-80 bg-indigo-100 rounded-full flex items-center justify-center profile-pic floating">
+                            <i class="fas fa-user text-indigo-400 text-8xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-md">
+                            <div class="text-center">
+                                <p class="text-sm text-gray-500">Currently</p>
+                                <p class="font-bold text-indigo-600">Vibing!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Who Is Feyi?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-indigo-50 p-8 rounded-xl card-hover transition">
+                    <h3 class="text-xl font-semibold text-indigo-700 mb-4 flex items-center">
+                        <i class="fas fa-info-circle mr-2"></i> Basic Info
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-ruler-vertical text-indigo-500 mt-1 mr-3"></i>
+                            <span><strong>Height:</strong> 5'3"</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-weight text-indigo-500 mt-1 mr-3"></i>
+                            <span><strong>Weight:</strong> 55kg</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-users text-indigo-500 mt-1 mr-3"></i>
+                            <span><strong>Siblings:</strong> 3 sister</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-purple-50 p-8 rounded-xl card-hover transition">
+                    <h3 class="text-xl font-semibold text-purple-700 mb-4 flex items-center">
+                        <i class="fas fa-eye mr-2"></i> In Hindsight
+                    </h3>
+                    <p class="text-gray-700">
+                        I do not enjoy doing things, any activity that includes the movement of my body you would never find me there.
+                        I do not have any imperfections, i believe i was one of the rare ones that was born perfect -talking abouty my character. 
+                        I believe i am a mountain and i do not need you bitches, love all my friends down, they're the reason i love living, well and me cos living with myself is so amazing.
+                        I cannot be gaslit, I am very self aware and I love myself in a way that can be mistaken for narcissism.
+                    </p>
+                </div>
+            </div>
+            
+            <hr class="section-divider my-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-pink-50 p-8 rounded-xl card-hover transition">
+                    <h3 class="text-xl font-semibold text-pink-700 mb-4 flex items-center">
+                        <i class="fas fa-heart mr-2"></i> Food I Love
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-pink-700">Anything chocolate</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-pink-700">Spaggetti</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-pink-700">Rice; every form</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-pink-700">Junks</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-pink-700">Burger</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-pink-700">Sharwarma</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-pink-700">Pineapples</span>
+
+                    </div>
+                </div>
+                
+                <div class="bg-amber-50 p-8 rounded-xl card-hover transition">
+                    <h3 class="text-xl font-semibold text-amber-700 mb-4 flex items-center">
+                        <i class="fas fa-thumbs-down mr-2"></i> Food I Hate
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Vegetables</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Egg yoke</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Avocado</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Raw Onions</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Pawpaw</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Semo</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Dried fish</span>
+                        <span class="bg-white px-4 py-2 rounded-full shadow-sm text-amber-700">Sugary stuff</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Likes Section -->
+    <section id="likes" class="py-16 px-4 sm:px-6 lg:px-8 bg-indigo-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Things I <span class="text-indigo-600">Like</span></h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">These are some of the things that bring me joy, which is ironic because my name is literally joy</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-indigo-500 text-3xl mb-4">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Reading</h3>
+                    <p class="text-gray-600">My favorite genre is thriller, i love murder mystery more than anything, love guessing and being at the edge of my sit while i read.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-indigo-500 text-3xl mb-4">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Music</h3>
+                    <p class="text-gray-600">I'm a r&b girlie through and through, i love music that is good for my soul, i love afrobeat, rap and trap, pop, alternative msuic too.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-indigo-500 text-3xl mb-4">
+                        <i class="fas fa-cloud-sun"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Other things</h3>
+                    <p class="text-gray-600">Learning new things, and i mean that, i don't like learning in general but i like getting familair with things that are foreign to me.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-indigo-500 text-3xl mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Eating</h3>
+                    <p class="text-gray-600">I'm not much of a cook but i love love love eating, food makes me more happy than anything in the world.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-indigo-500 text-3xl mb-4">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Movies</h3>
+                    <p class="text-gray-600">Horror, not too spiritual horror movies tho, slashers and horror comdedy, I love adult cartoons, anime, action movies and psychological thrillers.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-indigo-500 text-3xl mb-4">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Animals</h3>
+                    <p class="text-gray-600">I don't really care for them but i would be getting a cat in the near future, could be tomorrow, could be in five years, but i would be getting one or more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dislikes Section -->
+    <section id="dislikes" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Things I <span class="text-rose-600">Dislike</span></h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">These are my pet peeves and things I try to avoid</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-rose-50 p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-rose-500 text-3xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Being Late</h3>
+                    <p class="text-gray-600">I hate having to wait around for someone, i don't like when people dont have sense of urgency.</p>
+                </div>
+                
+                <div class="bg-rose-50 p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-rose-500 text-3xl mb-4">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Messiness</h3>
+                    <p class="text-gray-600">With yourself and surrounding, just don't be messy, its icky and weird as an adult and it says alo about you.</p>
+                </div>
+                
+                <div class="bg-rose-50 p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-rose-500 text-3xl mb-4">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Hot Weather</h3>
+                    <p class="text-gray-600">I prefer to shiver, i don't like when i sweat, it adds to my anger.</p>
+                </div>
+                
+                <div class="bg-rose-50 p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-rose-500 text-3xl mb-4">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Loud Noises</h3>
+                    <p class="text-gray-600">Makes me overstimulated and angry, if its not music we have no business being loud, be calm and i try my very best to be in calm places, it is very good for the soul.</p>
+                </div>
+                
+                <div class="bg-rose-50 p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-rose-500 text-3xl mb-4">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Insects</h3>
+                    <p class="text-gray-600">Not scared of them, can easily kill them but they are disgusting so they make the list!</p>
+                </div>
+                
+                <div class="bg-rose-50 p-6 rounded-xl shadow-sm card-hover transition">
+                    <div class="text-rose-500 text-3xl mb-4">
+                        <i class="fas fa-comment-slash"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Small Talk</h3>
+                    <p class="text-gray-600">I don't like engaging in conversations at all, avoid me with all that small talk nonsense.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="py-16 px-4 sm:px-6 lg:px-8 bg-purple-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">My <span class="text-purple-600">Hobbies & Passion</span></h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">I prefer to not do anything but these are the few things i don't mind doing</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover transition">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-paint-brush text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Colouring</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        It's very calming for my soul and i love how it always comes out. 
+                        I doodle on every journal and note book i own, I believe it's a form of expression.
+                    </p>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <p class="text-purple-700 italic">"I can't draw but i draw, it doesnt come out nice but it's still drawing!"</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover transition">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-camera text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Capturing and looking at pretty things</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Something i genieuly enjoy doing is taking pictures of things, or people i find interesting, they don't even have to be interesting, chakam!. 
+                        And i love looking at pretty things, you would most definately find me in front of a mirror.
+                    </p>
+                    <div class="flex space-x-2">
+                        <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">#loveme</span>
+                        <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">#obsessedwmyself/span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover transition">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-leaf text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Sleeping and gardening</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        I hardly garden, but when i do, i like the feeling
+                        I loveeee sleeping and gardening induces sleep for me.
+                    </p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-seedling mr-1 text-green-500"></i>
+                        <span>not talking aboout plants</span>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm card-hover transition">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-purple-100 p-3 rounded-full mr-4">
+                            <i class="fas fa-globe-africa text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Travelling around the world</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        Not gotten around to doing that but the thought of it makes me really excited, solo trips or with my friends.
+                        Need to try food all over the world and just see places tbh
+                    </p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="bg-purple-600 h-2.5 rounded-full" style="width: 65%"></div>
+                    </div>
+                    <p class="text-right text-xs text-gray-500 mt-1">shege seen cos of imagination - 65%</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-8 rounded-xl shadow-sm card-hover transition">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-6 md:mb-0 flex justify-center">
+                        <div class="bg-purple-100 p-6 rounded-full">
+                            <i class="fas fa-fire text-purple-600 text-5xl"></i>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-2xl font-bold text-purple-700 mb-4">My Biggest Passion: Mental Health Advocacy</h3>
+                        <p class="text-gray-600 mb-4">
+                            Beyond my hobbies, my true passion lies in making sure everyone's mental health is in cehck 
+                            because I can't offer much I pray constantly for my friends I know i can't help with how their head works
+                            If it was within my power I'd remove emotional pain from everything.
+                        </p>
+                        <p class="text-gray-600">
+                            Being nicer to people and not always lashing out is one thing I always make sure to remember 
+                            I don't have to talk to you, but I also don't have to be mean to you. 
+                            But I do bands for bands.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-indigo-600 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Fun <span class="text-indigo-200">Facts</span> About Me</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="text-4xl mb-4 text-indigo-200">
+                        <i class="fas fa-mug-hot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Hot drinks is my tea</h3>
+                    <p class="text-indigo-100">No literally, I love tea, ginger tea, green tea, lipton, ginger and honey, anything that is hot and goes down smoothly. It's a shame i can't drink myself, sigh</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="text-4xl mb-4 text-indigo-200">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Travel Bucket List</h3>
+                    <p class="text-indigo-100">Praying without stopping for that one.
+                        Fingers Crossed these first; Paris, Morocco and Greece
+                    </p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="text-4xl mb-4 text-indigo-200">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Book Worm</h3>
+                    <p class="text-indigo-100">I have read over 3,000 books, started reading(non-educational) books when i was 12, first book i read was Sidney Sheldon's Tell Me Your Dreams, had me hooked on thrilers.</p>
+                </div>
+
+                 <div class="bg-white bg-opacity-10 p-6 rounded-xl backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="text-4xl mb-4 text-indigo-200">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Eating</h3>
+                    <p class="text-indigo-100">Like I've mentioned numerous times, food, thats my second love after sleep, so if you're moving to me, be liquid. I weight love with how much I am fed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">My <span class="text-indigo-600">Pictures</span> & <span class="text-green-500">Music</span></h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src=" C:\Users\Feyi\Downloads\joyy\joyfour.jpg" alt="Me" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src=" C:\Users\Feyi\Downloads\joyy\joytwo.jpg" alt="Me" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src="C:\Users\Feyi\Downloads\joyy\joyfive.jpg" alt="Me" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl shadow-lg">
+                    <img src=" C:\Users\Feyi\Downloads\joyy\joythree.jpg" alt="Me" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+
+            <div class="text-center">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">My Current Spotify Playlist</h3>
+                <a href="https://open.spotify.com/playlist/0D2vk6w3kuUqQBjLrCm6zS?si=X7Dy3M52SK6t9x5qzdZWuw&pi=l-MyxNveT46R1" 
+                   class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition shadow-md"
+                   target="_blank">
+                    <i class="fab fa-spotify mr-2 text-xl"></i> Listen on Spotify
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold text-indigo-400">About Feyi</h3>
+                    <p class="text-gray-400 mt-2">That's basically it.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/feyiiadeyanju/" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://t.snapchat.com/UO3XP9CU" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-snapchat text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="border-gray-700 my-8">
+            
+            <div class="text-center text-gray-400 text-sm">
+                <p>© 2025 About Feyi. All rights reserved.</p>
+                <p class="mt-2">Made with <i class="fas fa-heart text-rose-400"></i> and short temper</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        function animateOnScroll() {
+            const cards = document.querySelectorAll('.card-hover');
+            
+            cards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (cardPosition < screenPosition) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html> 
